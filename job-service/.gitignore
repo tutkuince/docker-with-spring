@@ -1,6 +1,3 @@
-sec02.docker.compose/lec06.mongo.express/data/**
-
-
 HELP.md
 target/
 !.mvn/wrapper/maven-wrapper.jar
