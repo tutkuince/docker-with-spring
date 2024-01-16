@@ -32,6 +32,6 @@ public class JobService {
     public Mono<JobDto> save(Mono<JobDto> mono) {
         return mono.map(EntityDtoUtil::toJobEntity)
                 .flatMap(this.repository::save)
-                .map(EntityDtoUtil::toJobDto)
+                .map(EntityDtoUtil::toJobDto);
     }
 }
