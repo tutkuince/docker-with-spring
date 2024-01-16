@@ -1,5 +1,5 @@
 // create db
-db = db.getSiblinDB("job");
+db = db.getSiblingDB("job");
 
 // create user
 db.createUser({
