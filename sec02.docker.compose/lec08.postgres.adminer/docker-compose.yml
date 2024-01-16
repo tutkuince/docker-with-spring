@@ -1,20 +1,19 @@
 version: "3.0"
 
 services:
-  mongo:
-    image: mongo
+  postgres:
+    image: postgres
     environment:
-      MONGO_INITDB_ROOT_USERNAME: admin
-      MONGO_INITDB_ROOT_PASSWORD: password
-  mongo-express:
-    image: mongo-express
+      POSTGRES_USER: tutku
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: productdb
+    restart: always
+    volumes:
+      - ./data:/docker-entrypoint-initdb.d
+  adminer:
+    image: adminer
     restart: always
     depends_on:
-      - mongo
+      - postgres
     ports:
-      - "8081:8081"
-    environment:
-      ME_CONFIG_MONGODB_ADMINUSERNAME: admin
-      ME_CONFIG_MONGODB_ADMINPASSWORD: password
-      ME_CONFIG_MONGODB_SERVER: mongo
-      ME_CONFIG_MONGODB_PORT: 27017
+      - "8080:8080"
