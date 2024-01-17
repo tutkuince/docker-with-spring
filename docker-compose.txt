@@ -3,3 +3,5 @@ docker-compose down             => Stops containers and removes containers, netw
 docker-compose -f nginx.yml     => Runs the docker-compose file with a specific name with "-f"
 docker-compose up -d            => Builds, (re)creates, starts, and attaches to containers for a service. (Detached Mode)
 docker-compose logs             => Command batch-retrieves logs present at the time of execution.
+docker-compose build            => Services are built once and then tagged, by default as project_service.
+docker-compose up --build       => Build images before starting containers.
