@@ -8,6 +8,7 @@ services:
     volumes:
       - ./src/test/resources/data:/docker-entrypoint-initdb.d
   job-service:
+    build: .
     image: tutkuince/job-service
     depends_on:
       - mongo
