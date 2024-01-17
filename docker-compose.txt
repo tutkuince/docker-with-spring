@@ -6,3 +6,5 @@ docker-compose logs             => Command batch-retrieves logs present at the t
 docker-compose build            => Services are built once and then tagged, by default as project_service.
 docker-compose up --build       => Build images before starting containers.
 docker-compose --profile up     => To start a specific profile supply the --profile command-line option or use the COMPOSE_PROFILES environment variable
+
+mvn spring-boot:build-image     => build pack
