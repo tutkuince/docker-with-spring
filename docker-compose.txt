@@ -8,3 +8,6 @@ docker-compose up --build       => Build images before starting containers.
 docker-compose --profile up     => To start a specific profile supply the --profile command-line option or use the COMPOSE_PROFILES environment variable
 
 mvn spring-boot:build-image     => build pack
+
+
+mvn clean verify                => Run Unit tests and Integration tests

@@ -1,7 +1,7 @@
 package io.tutkuince.jobservice;
 
 import io.tutkuince.jobservice.dto.JobDto;
-import io.tutkuince.jobservice.generic.BaseTest;
+import io.tutkuince.jobservice.compose.BaseTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
