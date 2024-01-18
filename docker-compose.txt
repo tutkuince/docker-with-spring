@@ -9,5 +9,12 @@ docker-compose --profile up     => To start a specific profile supply the --prof
 
 mvn spring-boot:build-image     => build pack
 
-
+# Maven
 mvn clean verify                => Run Unit tests and Integration tests
+
+
+# Dockerfile
+Build the image:
+    - docker build -t getting-started .
+    - The docker build command uses the Dockerfile to build a new image.
+    - the -t flag tags your image.  => docker build -t tutkuince/candidate-service .
