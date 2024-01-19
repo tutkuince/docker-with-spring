@@ -1,5 +1,6 @@
 package io.tutkuince.candidateservice.util;
 
+import io.tutkuince.candidateservice.dto.CandidateDetailsDto;
 import io.tutkuince.candidateservice.dto.CandidateDto;
 import io.tutkuince.candidateservice.entity.Candidate;
 import org.springframework.beans.BeanUtils;
@@ -15,5 +16,11 @@ public class EntityDtoUtil {
         Candidate candidate = new Candidate();
         BeanUtils.copyProperties(dto, candidate);
         return candidate;
+    }
+
+    public static CandidateDetailsDto toCandidateDetailsDto(Candidate candidate) {
+        CandidateDetailsDto dto = new CandidateDetailsDto();
+        BeanUtils.copyProperties(candidate, dto);
+        return dto;
     }
 }
