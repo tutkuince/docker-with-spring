@@ -10,7 +10,7 @@ import org.testcontainers.junit.jupiter.Testcontainers;
 import java.io.File;
 
 @Testcontainers
-public class BaseTest {
+public abstract class BaseTest {
 
     private static final int MONGO_PORT = 27017;
     private static final String MONGO = "mongo";

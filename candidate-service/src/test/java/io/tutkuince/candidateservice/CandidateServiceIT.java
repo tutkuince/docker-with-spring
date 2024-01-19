@@ -3,12 +3,14 @@ package io.tutkuince.candidateservice;
 import io.tutkuince.candidateservice.dto.CandidateDto;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.reactive.AutoConfigureWebTestClient;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import java.util.Set;
 
 @SpringBootTest
+@AutoConfigureWebTestClient
 class CandidateServiceIT extends BaseTest {
 
     @Autowired
