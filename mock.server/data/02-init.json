@@ -1,0 +1,39 @@
+[
+  {
+    "httpRequest": {
+      "path": "/some/.*",
+      "method": "GET"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": {
+        "msg": "regex matched"
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/query",
+      "queryStringParameters": {
+        "q": [
+          "docker"
+        ]
+      },
+      "method": "GET"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": {
+        "msg": "Did you try to search for Docker?"
+      }
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/error/500"
+    },
+    "httpResponse": {
+      "statusCode": 500
+    }
+  }
+]
