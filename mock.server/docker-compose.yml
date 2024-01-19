@@ -8,4 +8,4 @@ services:
     environment:
       MOCKSERVER_INITIALIZATION_JSON_PATH: /config/init.json
     volumes:
-      - "./data/01-init.json:/config/init.json"
+      - "./data/02-init.json:/config/init.json"
