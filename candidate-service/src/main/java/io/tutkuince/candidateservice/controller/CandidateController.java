@@ -1,5 +1,6 @@
 package io.tutkuince.candidateservice.controller;
 
+import io.tutkuince.candidateservice.client.JobClient;
 import io.tutkuince.candidateservice.dto.CandidateDto;
 import io.tutkuince.candidateservice.service.CandidateService;
 import org.springframework.web.bind.annotation.*;
@@ -10,9 +11,11 @@ import reactor.core.publisher.Mono;
 @RequestMapping("candidate")
 public class CandidateController {
     private final CandidateService candidateService;
+    private final JobClient client;
 
-    public CandidateController(CandidateService candidateService) {
+    public CandidateController(CandidateService candidateService, JobClient client) {
         this.candidateService = candidateService;
+        this.client = client;
     }
 
     @GetMapping("all")
