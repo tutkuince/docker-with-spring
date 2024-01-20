@@ -27,5 +27,27 @@
         }
       ]
     }
+  },
+  {
+    "httpRequest": {
+      "path": "/job/search",
+      "queryStringParameters": {
+        "skills": [ "docker" ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 404
+    }
+  },
+  {
+    "httpRequest": {
+      "path": "/job/search",
+      "queryStringParameters": {
+        "skills": [ "jira" ]
+      }
+    },
+    "httpResponse": {
+      "statusCode": 500
+    }
   }
 ]
