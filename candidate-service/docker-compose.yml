@@ -4,13 +4,13 @@ services:
   mongo:
     image: mongo
     ports:
-      - "${HOST_PORT1:-27017}:27017"
+      - "${HOST_MONGO_PORT:-27017}:27017"
     volumes:
       - "./src/test/resources/data:/docker-entrypoint-initdb.d"
   job-mock:
     image: mockserver/mockserver
     ports:
-      - "1080:1080"
+      - "${HOST_MOCK_PORT:-1080}:1080"
     environment:
       MOCKSERVER_INITIALIZATION_JSON_PATH: /config/init.json
     volumes:
