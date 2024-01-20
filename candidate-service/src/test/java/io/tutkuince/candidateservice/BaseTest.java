@@ -39,7 +39,7 @@ public abstract class BaseTest {
                 .withEnv(MONGO_SERVICE.getHostPortEnvVariable(), MONGO_SERVICE.getHostPort())
                 .withEnv(JOB_SERVICE.getHostPortEnvVariable(), JOB_SERVICE.getHostPort())
                 .withExposedService(MONGO_SERVICE.getName(), MONGO_SERVICE.getPort(), Wait.forListeningPort())
-                .withExposedService(JOB_SERVICE.getName(), JOB_SERVICE.getPort(), Wait.forListeningPort())
+                .withExposedService(JOB_SERVICE.getName(), JOB_SERVICE.getPort(), Wait.forHttp("/health").forStatusCode(200))
                 .start();
 
         String mongoServiceHost = COMPOSE.getServiceHost(MONGO_SERVICE.getName(), MONGO_SERVICE.getPort());
