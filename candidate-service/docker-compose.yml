@@ -7,6 +7,14 @@ services:
       - "${HOST_PORT1:-27017}:27017"
     volumes:
       - "./src/test/resources/data:/docker-entrypoint-initdb.d"
+  job-mock:
+    image: mockserver/mockserver
+    ports:
+      - "1080:1080"
+    environment:
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/init.json
+    volumes:
+      - "./src/test/resources/data/job-init.json:/config/init.json"
   candidate-service:
     build: .
     image: tutkuince/candidate-service
