@@ -49,5 +49,14 @@
     "httpResponse": {
       "statusCode": 500
     }
+  },
+  {
+    "httpRequest": {
+      "path": "/health"
+    },
+    "httpResponse": {
+      "statusCode": 200,
+      "body": "Up"
+    }
   }
 ]
