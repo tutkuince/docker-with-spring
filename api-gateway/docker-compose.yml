@@ -8,6 +8,8 @@ services:
   job-service:
     build: ../job-service
     image: tutkuince/job-service
+    deploy:
+      replicas: 2
     depends_on:
       - mongo
     environment:
@@ -15,6 +17,8 @@ services:
   candidate-service:
     build: ../candidate-service
     image: tutkuince/candidate-service
+    deploy:
+      replicas: 2
     depends_on:
       - mongo
       - job-service
