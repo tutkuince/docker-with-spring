@@ -9,6 +9,7 @@ public class EntityDtoUtil {
     public static CandidateDto toCandidateDto(Candidate candidate) {
         CandidateDto dto = new CandidateDto();
         BeanUtils.copyProperties(candidate, dto);
+        dto.setHostName(AppUtil.getHostName());
         return dto;
     }
 
@@ -21,6 +22,7 @@ public class EntityDtoUtil {
     public static CandidateDetailsDto toCandidateDetailsDto(Candidate candidate) {
         CandidateDetailsDto dto = new CandidateDetailsDto();
         BeanUtils.copyProperties(candidate, dto);
+        dto.setHostName(AppUtil.getHostName());
         return dto;
     }
 }

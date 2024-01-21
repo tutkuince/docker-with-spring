@@ -41,7 +41,7 @@ class CandidateServiceIT extends BaseTest {
 
     @Test
     void postCandidateTest() {
-        CandidateDto candidateDto = CandidateDto.create(null, "tutku", Set.of("k8s", "docker"));
+        CandidateDto candidateDto = CandidateDto.create(null, "tutku", Set.of("k8s", "docker"), null);
         this.client.post()
                 .uri("/candidate")
                 .bodyValue(candidateDto)

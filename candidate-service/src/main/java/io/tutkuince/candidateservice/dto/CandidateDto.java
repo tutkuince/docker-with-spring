@@ -13,4 +13,5 @@ public class CandidateDto {
     private String id;
     private String name;
     private Set<String> skills;
+    private String hostName;
 }
