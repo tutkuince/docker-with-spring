@@ -17,4 +17,6 @@ WORKDIR /usr/share/app
 #COPY target/*.jar app.jar
 COPY --from=BUILDER /build/target/*.jar app.jar
 
+EXPOSE 8080
+
 CMD ["java", "-jar", "app.jar"]
